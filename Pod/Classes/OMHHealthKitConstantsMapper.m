@@ -135,6 +135,52 @@
             return @"HKWorkoutActivityTypeWrestling";
         case HKWorkoutActivityTypeYoga:
             return @"HKWorkoutActivityTypeYoga";
+        case HKWorkoutActivityTypeBarre:
+            return @"HKWorkoutActivityTypeBarre";
+        case HKWorkoutActivityTypeCoreTraining:
+            return @"HKWorkoutActivityTypeCoreTraining";
+        case HKWorkoutActivityTypeCrossCountrySkiing:
+            return @"HKWorkoutActivityTypeCrossCountrySkiing";
+        case HKWorkoutActivityTypeDownhillSkiing:
+            return @"HKWorkoutActivityTypeDownhillSkiing";
+        case HKWorkoutActivityTypeFlexibility:
+            return @"HKWorkoutActivityTypeFlexibility";
+        case HKWorkoutActivityTypeHighIntensityIntervalTraining:
+            return @"HKWorkoutActivityTypeHighIntensityIntervalTraining";
+        case HKWorkoutActivityTypeJumpRope:
+            return @"HKWorkoutActivityTypeJumpRope";
+        case HKWorkoutActivityTypeKickboxing:
+            return @"HKWorkoutActivityTypeKickboxing";
+        case HKWorkoutActivityTypePilates:
+            return @"HKWorkoutActivityTypePilates";
+        case HKWorkoutActivityTypeSnowboarding:
+            return @"HKWorkoutActivityTypeSnowboarding";
+        case HKWorkoutActivityTypeStairs:
+            return @"HKWorkoutActivityTypeStairs";
+        case HKWorkoutActivityTypeStepTraining:
+            return @"HKWorkoutActivityTypeStepTraining";
+        case HKWorkoutActivityTypeWheelchairWalkPace:
+            return @"HKWorkoutActivityTypeWheelchairWalkPace";
+        case HKWorkoutActivityTypeWheelchairRunPace:
+            return @"HKWorkoutActivityTypeWheelchairRunPace";
+        case HKWorkoutActivityTypeTaiChi:
+            return @"HKWorkoutActivityTypeTaiChi";
+        case HKWorkoutActivityTypeMixedCardio:
+            return @"HKWorkoutActivityTypeMixedCardio";
+        case HKWorkoutActivityTypeHandCycling:
+            return @"HKWorkoutActivityTypeHandCycling";
+        case HKWorkoutActivityTypeDiscSports:
+            return @"HKWorkoutActivityTypeDiscSports";
+        case HKWorkoutActivityTypeFitnessGaming:
+            return @"HKWorkoutActivityTypeFitnessGaming";
+        case HKWorkoutActivityTypeCardioDance:
+            return @"HKWorkoutActivityTypeCardioDance";
+        case HKWorkoutActivityTypeSocialDance:
+            return @"HKWorkoutActivityTypeSocialDance";
+        case HKWorkoutActivityTypePickleball:
+            return @"HKWorkoutActivityTypePickleball";
+        case HKWorkoutActivityTypeCooldown:
+            return @"HKWorkoutActivityTypeCooldown";
         case HKWorkoutActivityTypeOther:
             return @"HKWorkoutActivityTypeOther";
         default:{
@@ -155,6 +201,10 @@
         case HKCategoryValueSleepAnalysisAsleep:
             return @"Asleep";
             break;
+        case HKCategoryValueSleepAnalysisAwake:
+            return @"Awake";
+            break;
+
         default:{
             NSException *e = [NSException
                               exceptionWithName:@"HKCategoryValueSleepAnalysisInvalidValue"
@@ -359,7 +409,11 @@
                                         HKQuantityTypeIdentifierPeripheralPerfusionIndex: @"OMHSerializerGenericQuantitySample",
                                         HKQuantityTypeIdentifierRespiratoryRate: @"OMHSerializerRespiratoryRate",
                                         HKQuantityTypeIdentifierStepCount : @"OMHSerializerStepCount",
-                                        HKQuantityTypeIdentifierUVExposure: @"OMHSerializerGenericQuantitySample"
+                                        HKQuantityTypeIdentifierUVExposure: @"OMHSerializerGenericQuantitySample",
+                                        HKQuantityTypeIdentifierVO2Max: @"OMHSerializerGenericQuantitySample",
+                                        HKQuantityTypeIdentifierHeartRateVariabilitySDNN: @"OMHSerializerGenericQuantitySample",
+                                        HKQuantityTypeIdentifierRestingHeartRate: @"OMHSerializerGenericQuantitySample",
+
                                         };
     }
     return allQuantityTypeIdsToClasses;

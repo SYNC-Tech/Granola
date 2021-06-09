@@ -103,7 +103,7 @@
     //otherwise, it defaults to using the OMH schema for the 'asleep' state.
     if ([sampleTypeIdentifier isEqualToString:HKCategoryTypeIdentifierSleepAnalysis]){
         HKCategorySample* categorySample = (HKCategorySample*)sample;
-        if(categorySample.value == HKCategoryValueSleepAnalysisInBed){
+        if(categorySample.value == HKCategoryValueSleepAnalysisInBed || categorySample.value == HKCategoryValueSleepAnalysisAwake){
             serializerClassName = @"OMHSerializerGenericCategorySample";
         }
     }
@@ -115,7 +115,7 @@
     // instantiate a serializer
     OMHSerializer* serializer = [[serializerClass alloc] initWithSample:sample];
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:[serializer data]
-                                    options:NSJSONWritingPrettyPrinted
+                                    options:NULL
                                       error:error];
     if (!jsonData) {
         return nil; // return early if JSON serialization failed
